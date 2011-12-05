@@ -1,0 +1,25 @@
+/* 
+    Document   : concordance
+    Created on : 30 oct. 2011, 17:22:15
+    Author     : william
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.highlight { 
+    background-color: yellow;
+}
+
+td,tr{
+    border: gray double;
+}
+
