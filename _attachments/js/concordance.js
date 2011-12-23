@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-
+var NOM_DB = "traduxio3";
 
 function recherche_termes(termes,parametre){
     const WORD_CUTTER = /[\s\.;:\-,\!\?\)\(\]\[\{\}\'\`\‘\’\"\″\“\”\«\»\\\/]/g;     
@@ -11,8 +11,8 @@ function recherche_termes(termes,parametre){
     //Pour le nom de la vu ce n'est pas évident : nom doc design/nom_vue (sans compter le "_design/")
     
     
-    
-    $.couch.db("traduxio3").view("traduxio3/search", {
+    console.log(NOM_DB);
+    $.couch.db(NOM_DB).view(NOM_DB+"/search", {
                                     
         key:termes,
         success:function(data){

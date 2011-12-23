@@ -38,3 +38,55 @@ This pushes to the `default` as specified. To push to the `public` you'd run:
     couchapp push public
 
 Of course you can continue to add more deployment targets as you see fit, and give them whatever names you like.
+
+## Documents of Traduxio2
+
+The documents should respect a form similar to the following example : 
+
+{
+   "_id": "4f5385bdb1612484738336d12c0000d9",
+   "_rev": "1-6083353dcac37b31a54058ee97fb5673",
+   "auteur": "Frédéric Bastia",
+   "langue_originale": "français",
+   "traductions": [
+       {
+           "langue": "anglais",
+           "traducteur": "X",
+           "titre": "The law",
+           "blocs": [
+               {
+                   "contenu": "Under such an administration, everyone would understand that he possessed all the privileges as well as all the responsibilities of his existence. No one would have any argument with government, provided that his person was respected, his labor was free, and the fruits of his labor were protected against all unjust attack. When successful, we would not have to thank the state for our success. And, conversely, when unsuccessful, we would no more think of blaming",
+                   "debut": 1,
+                   "fin": 50
+               },
+               {
+                   "contenu": "the state for our misfortune than would the farmers blame the state because of hail or frost.",
+                   "debut": 51,
+                   "fin": 100
+               },
+               {
+                   "contenu": "The state would be felt only by the invaluable blessings of safety provided by this concept of government",
+                   "debut": 101,
+                   "fin": 195
+               }
+           ]
+       }
+   ],
+   "annee": 1888,
+   "contenu": "Heureux nous n'aurions pas, il est vrai, à le remercier de nos succès; Car, sous un tel régime, chacun comprendrait bien qu'il a toute la plénitude comme toute la responsabilité de son Existence. Nous ne le connaîtrions que par l'inestimable bienfait de la Sûreté.Pourvu que la personne fût respectée, le travail libre et les fruits du travail garantis contre toute injuste atteinte, nul n'aurait rien à démêler avec l'État. mais malheureux, nous ne nous en prendrions pas plus à lui de nos revers que nos paysans ne lui attribuent la grêle ou la gelée.",
+   "titre": "La loi",
+   "type": "texte"
+}
+
+##Database
+
+You can specify the database used in concordance.js.
+You can edit the line "var NOM_DB = "traduxio3" "
+
+## Make a research
+
+1. Open the URL http://127.0.0.1:5984/[your database name]/_design/traduxio2/concordance.html
+2. Search words in the field "Rechercher"
+3. All the expression will be matched, you can search only the beginning or the end of a world with the * caracter
+    hell* could match hello for example.
+
